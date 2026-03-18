@@ -1,10 +1,8 @@
 import gearth.extensions.Extension;
-import gearth.extensions.ExtensionForm;
 import gearth.extensions.ExtensionInfo;
 import gearth.extensions.parsers.*;
 import gearth.protocol.HMessage;
 import gearth.protocol.HPacket;
-import javafx.fxml.Initializable;
 
 import java.net.URL;
 import java.util.*;
@@ -87,8 +85,8 @@ public class UserAdder extends Extension {
                 } catch (InterruptedException ignored) {}
             }
             isSent = true;
-            if (showInfo)
-                sendToServer(new HPacket("{out:Whisper}{s:\"Thauan I have added " + total + " users in this room. \"}{i:0}"));
+//            if (showInfo)
+//                sendToServer(new HPacket("Chat", HMessage.Direction.TOCLIENT, 0, "I have added \" + total + \" users in this room.", 0, 34, 0, 0));
         }
     }
 
